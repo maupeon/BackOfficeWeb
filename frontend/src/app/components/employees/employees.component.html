@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+            <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Enter your name">
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="surname" #surname="ngModel" [(ngModel)]="employeeService.selectedEmployee.surname" placeholder="Enter your surname">
+                </div>
+                <div class="input-field col s12">
+                    <input type="email" name="email" #email="ngModel" [(ngModel)]="employeeService.selectedEmployee.email" placeholder="Enter your email">
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="username" #username="ngModel" [(ngModel)]="employeeService.selectedEmployee.username" placeholder="Enter your username">
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="password" #password="ngModel" [(ngModel)]="employeeService.selectedEmployee.password" placeholder="Enter your password">
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="image" #image="ngModel" [(ngModel)]="employeeService.selectedEmployee.image" placeholder="Enter your image">
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="role" #role="ngModel" [(ngModel)]="employeeService.selectedEmployee.role" placeholder="Enter your role">
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" name="status" #status="ngModel" [(ngModel)]="employeeService.selectedEmployee.status" placeholder="Enter your status">
+                </div>
+
+                <div class="card-action">
+                  <div class="input-field col s12">
+                    <button class="btn #66bb6a green lighten-1">Save</button>
+                    <button class="btn right #00e5ff cyan accent-3" (click)="resetForm(employeeForm)">Clean</button>
+                  </div>
+
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table class="striped centered">
+        <thead  class="responsive-table">
+          <tr >
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Email</th>
+              <th>Username</th>
+              <th>Image</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Operators</th>
+          </tr>
+         
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeService.employees" >
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.surname }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.username }}</td>
+            <!-- <td>{{ employee.password }}</td> -->
+            <td>{{ employee.image }}</td>
+            <td>{{ employee.role }}</td>
+            <td>{{ employee.status }}</td>
+            <td>
+              <a (click)="editEmployee(employee)">
+                <i class="material-icons">edit</i>
+              </a>
+              <a (click)="deleteEmployee(employee._id)">
+                  <i class="material-icons">delete</i>
+                </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

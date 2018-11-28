@@ -1,0 +1,100 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+body{
+
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/library.jpg');
+    background-size: cover;
+}
+
+.login-box{
+    padding: 30px;
+    width: 30%;
+    min-width: 310px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    background-color: #333;
+}
+
+.login-box h1{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 80%;
+    float: left;
+    margin: 0 10px;
+}
+
+.button {
+    background-color: #2a6939; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;   
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+}
+
+#logoBox {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+}
+
+#logoBox img {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: #333;
+    color: #DDD;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #logoBox {
+    height: 70px;
+    width: 70px;
+  }
+}

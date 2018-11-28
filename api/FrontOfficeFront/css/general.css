@@ -1,0 +1,157 @@
+/*General*/
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.title {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+/*Nav*/
+
+.navbar {
+	justify-content: initial;
+	width: 100%;
+	background-color: #333;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.navbar form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	margin-top: 20px;
+}
+
+#searchBtn {
+	margin-bottom: 2.5%;	
+	margin-left: 2.5%;
+	width: 80px;
+	text-align: center;
+}
+
+#searchInputBox {
+	width: 80%;
+}
+
+#logoBig {
+	width: 10%;
+	max-width: 100px;
+}
+
+#logoBig img {
+	width: auto;
+	max-height: 100px;
+	margin-right: 5%;
+}
+
+#userNavigation {
+	display: flex;
+	flex-wrap: wrap;	
+	width: 35%;
+}
+
+.userNavigationButton {
+	width: 25%;
+	margin-left: 4.15151515%;
+	margin-right: 4.15151515%;
+	text-align: center;
+	color: #DDD;
+	text-decoration: none;
+	transition: all 0.5s ease;
+	padding: 1%;
+}
+
+.userNavigationButton:hover {
+	text-decoration: none;
+	background-color: #078686;
+	color: white;
+}
+
+#userNavigationMobile {
+	display: none;
+}
+
+#userNavigationMobileDropDownMenu {
+	display: none;
+	flex-wrap: wrap;
+	position: absolute;
+    background: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: #AAA solid 1px;
+    margin-top: 4px;
+}
+
+#userNavigationMobileDropDownMenu a {
+	width: 100%;
+	padding: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #212529;
+}
+
+#userNavigationMobileDropDownMenu .buscar {
+	display: none;
+}
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	background-color: #333;
+	color: #DDD;
+	text-align: center;
+}
+
+/*1000px breakpoint*/
+
+@media only screen and (max-width: 1000px) {
+	.navbar form {
+		width: 70%;
+	}
+
+	#userNavigation {
+		display: none;
+	}
+
+	#userNavigationMobile {
+		display: block;
+	}
+}
+
+/*750px breakpoint*/
+
+@media only screen and (max-width: 750px) {
+	/*Nav bar*/
+	#logoBig {
+		width: 80%;
+		max-width: none;
+	}
+
+	#logoBig img {
+		max-height: 60px;
+	}
+
+	.navbar form {
+		display: none;
+	}
+
+	#userNavigationMobileDropDownMenu .buscar {
+		display: block;
+	}
+}

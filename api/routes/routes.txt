@@ -1,0 +1,111 @@
+Actions over client (CRUD)
+http://localhost:3977/api/client     (with post) -> Used to register a new client
+http://localhost:3977/api/client/:id   (with get) -> Used to return the clients info, the parameter id is mandatory and is the id of the client
+http://localhost:3977/api/client/:id   (with put) -> Used to update a clients information, the parameter id is mandatory and is the id of the client
+http://localhost:3977/api/client/:id   (with delete) -> Used to delete a client, the parameter id is mandatory and is the id of the client
+
+Actions over client (APP)
+http://localhost:3977/api/client-login   (with post) -> Used to login as a client
+http://localhost:3977/api/upload-image-client/:id (with post) -> Used to upload the profile image of the user, the parameter id is mandatory and is the id of the client
+http://localhost:3977/api/get-image-client/:imageFile (with get) -> Used to get the profile image of the user, , with the filename as a parameter
+
+
+Actions over employee (CRUD)
+http://localhost:3977/api/employee     (with post) -> Used to register a new employee
+http://localhost:3977/api/employee/:id   (with get) -> Used to return the employee info, the parameter id is mandatory and is the id of the employee
+http://localhost:3977/api/employee/:id   (with put) -> Used to update a employee information, the parameter id is mandatory and is the id of the employee
+http://localhost:3977/api/employee/:id   (with delete) -> Used to delete a employee, the parameter id is mandatory and is the id of the employee
+
+Actions over employee (APP)
+http://localhost:3977/api/employee-login   (with post) -> Used to login as a employee
+http://localhost:3977/api/upload-image-employee/:id (with post) -> Used to upload the profile image of the employee, the parameter id is mandatory and is the id of the employee
+http://localhost:3977/api/get-image-employee/:imageFile (with get) -> Used to get the profile image of the employee, , with the filename as a parameter
+
+
+Actions over author (CRUD)
+http://localhost:3977/api/author     (with post) -> Used to create a new author
+http://localhost:3977/api/author/:id   (with get) -> Used to return the authors info, the parameter id is mandatory and is the id of the author
+http://localhost:3977/api/author/:id   (with put) -> Used to update an authors info, the parameter id is mandatory and is the id of the author
+http://localhost:3977/api/author/:id   (with delete) -> Used to delete an author, the parameter id is mandatory and is the id of the author
+
+Actions over author (APP)
+http://localhost:3977/api/authors/:page?   (with get) -> Used to return a the list of authors, the parameter page is not mandatory and is the number of authors per page
+http://localhost:3977/api/upload-image-author/:id (with post) -> Used to upload the image of the author, the parameter id is mandatory and is the id of the author
+http://localhost:3977/api/get-image-author/:imageFile (with get) -> Used to get the image of the author, with the filename as a parameter
+
+
+Actions over book (CRUD)
+http://localhost:3977/api/book     (with post) -> Used to create a new book
+http://localhost:3977/api/book/:id   (with get) -> Used to return the book info, the parameter id is mandatory and is the id of the book
+http://localhost:3977/api/book/:id   (with put) -> Used to update an book info, the parameter id is mandatory and is the id of the book
+http://localhost:3977/api/book/:id   (with delete) -> Used to delete an book, the parameter id is mandatory and is the id of the book
+
+Actions over book (APP)
+http://localhost:3977/api/books/:author?  (with get) -> Used to return a the list of book, the parameter author is not mandatory. Authorid is used to return the list of books of an author but if the parameter does not exist, then all the books in the database will be returned
+http://localhost:3977/api/upload-image-book/:id (with post) -> Used to upload the image of the book, the parameter id is mandatory and is the id of the book
+http://localhost:3977/api/get-image-book/:imageFile (with get) -> Used to get the image of the book, with the filename as a parameter
+http://localhost:3977/api/upload-file-book/:id (with post) -> Used to upload the pdf file of the book, the parameter id is mandatory and is the id of the book
+http://localhost:3977/api/get-file-book/:imageFile (with get) -> Used to get the pdf file of the book, with the filename as a parameter
+
+
+Actions over rent (CRUD)
+http://localhost:3977/api/rent     (with post) -> Used to create a new rent
+http://localhost:3977/api/rent/:id   (with get) -> Used to return the rent info, the parameter id is mandatory and is the id of the rent
+http://localhost:3977/api/rent/:id   (with put) -> Used to update a rent information, the parameter id is mandatory and is the id of the rent
+http://localhost:3977/api/rent/:id   (with delete) -> Used to delete a rent, the parameter id is mandatory and is the id of the rent
+
+Actions over rent (APP)
+http://localhost:3977/api/rents/:client?   (with get) -> Used to return a the list of rents of an client, the parameter client is not mandatory and is the id of a client, if it is not used, then it will return the list of all rents in the DB
+http://localhost:3977/api/rent-books/:id  (with get) -> Used to return a the list of books in a client, the parameter id is mandatory and is the id of the rent
+
+
+Actions over favorite_authors (CRUD)
+http://localhost:3977/api/fav     (with post) -> Used to create a new favorite author for a client
+http://localhost:3977/api/fav/:client/:author   (with get) -> Used to return the fav relationship, the parameters client and book are mandatory and are the respective ids
+http://localhost:3977/api/fav/:id   (with get) -> Used to return the favorite relationship with a given id
+http://localhost:3977/api/fav/:author  (with delete) -> Used to delete favorite author
+
+Actions over favorite_authors (APP)
+http://localhost:3977/api/favs/:client   (with get) -> Used to return all the favorite authors of a client, the parameter client is mandatory and is the id of a client
+http://localhost:3977/api/favs   (with get) -> Used to return all the favorite author relationships
+
+
+Actions over book_rating (CRUD)
+http://localhost:3977/api/rate     (with post) -> Used to create a new rate of a book
+http://localhost:3977/api/rate/:client/:book   (with get) -> Used to return the rate info of a book, the parameters client and book are mandatory and are the respective ids
+http://localhost:3977/api/rate/:id   (with get) -> Used to return the rate info of a book, the parameters id is mandatory and is the id of the rent
+http://localhost:3977/api/rent/:id   (with put) -> Used to update a rate information, the parameter id is mandatory and is the id of the rate
+http://localhost:3977/api/rent/:id   (with delete) -> Used to delete a rate, the parameter id is mandatory and is the id of the rate
+
+Actions over book_rating (APP)
+http://localhost:3977/api/rates-by-client/:client   (with get) -> Used to return all the rates of books of an user, the parameter client is mandatory and is the id of a client
+http://localhost:3977/api/rates-by-book/:book   (with get) -> Used to return all the rates of a book, the parameter book is mandatory and is the id of a book
+http://localhost:3977/api/rates   (with get) -> Used to return all the rates in the DB
+
+
+Actions over employee actions over clients (APP)
+http://localhost:3977/api/employee-created-clients/:employee?   (with get) -> Used to get the created clients by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all created users
+http://localhost:3977/api/employee-updated-clients/:employee?   (with get) -> Used to get the updates in the clients by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all updates in the users
+http://localhost:3977/api/employee-deleted-clients/:employee?  (with get) -> Used to get the deleted clients by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all deleted users
+http://localhost:3977/api/deleted-client/:id     (with get) -> Used to get a deleted client info with a given id
+http://localhost:3977/api/client-creation/:id     (with get) -> Used to get the info of the creation of a client by an employee, id is the id of the update
+http://localhost:3977/api/client-deletion/:id     (with get) -> Used to get the info of the deletion of a client by an employee, id is the id of the deletion
+http://localhost:3977/api/client-update/:id     (with get) -> Used to get the info of the update of a client by an employee, id is the id of the update
+
+Actions over employee actions over author (APP)
+http://localhost:3977/api/employee-created-authors/:employee?   (with get) -> Used to get the created authors by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all created authors
+http://localhost:3977/api/employee-updated-authors/:employee?   (with get) -> Used to get the updates in the authors by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all updates in the authors
+http://localhost:3977/api/employee-deleted-authors/:employee?  (with get) -> Used to get the deleted authors by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all deleted authors
+http://localhost:3977/api/deleted-author/:id     (with get) -> Used to get a deleted author info with a given id
+http://localhost:3977/api/author-creation/:id     (with get) -> Used to get the info of the creation of an author by an employee, id is the id of the update
+http://localhost:3977/api/author-deletion/:id     (with get) -> Used to get the info of the deletion of an author by an employee, id is the id of the deletion
+http://localhost:3977/api/author-update/:id     (with get) -> Used to get the info of the update of an author by an employee, id is the id of the update
+
+Actions over employee actions over book (APP)
+http://localhost:3977/api/employee-created-books/:employee?   (with get) -> Used to get the created books by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all created books
+http://localhost:3977/api/employee-updated-books/:employee?   (with get) -> Used to get the updates in the books by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all updates in the books
+http://localhost:3977/api/employee-deleted-books/:employee?  (with get) -> Used to get the deleted books by an employee, the parameter employee is not mandatory and is the id of an employee, if it is not filled, then the url will return the list of all deleted books
+http://localhost:3977/api/deleted-book/:id     (with get) -> Used to get a deleted book info with a given id
+http://localhost:3977/api/book-creation/:id     (with get) -> Used to get the info of the creation of a book by an employee, id is the id of the update
+http://localhost:3977/api/book-deletion/:id     (with get) -> Used to get the info of the deletion of a book by an employee, id is the id of the deletion
+http://localhost:3977/api/book-update/:id     (with get) -> Used to get the info of the update of a book by an employee, id is the id of the update

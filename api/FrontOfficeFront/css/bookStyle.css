@@ -1,0 +1,132 @@
+
+/*Book content*/
+
+#bookContent {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 40px;
+}
+
+#bookContentImage {
+	width: 25%;
+}
+
+#bookContentInfo {
+	width: 50%;
+}
+
+#bookContentCart {
+	width: 25%;
+}
+
+/*Book content - image*/
+
+#bookContentImage img {
+	max-width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*Book content - info*/
+
+#bookContentInfoTitle {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#bookContentInfoAuthor {
+	font-weight: bold;
+	margin-bottom: 8px;
+
+}
+
+/*Book content - cart*/
+
+#bookContentCartBox {
+	border: #DDD solid 2px;
+	border-radius: 5px;	
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 5%;
+}
+
+#bookContentCartBox .btn {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#bookContentCartBox .btn-success {
+	margin-bottom: 10px;
+}
+
+#bookContentCartBox .btn .glyph {
+	margin-right: 10px;
+}
+
+#favourite {
+	color: #212529;
+	transition: all 0.5s ease;
+	text-al
+}
+
+#favourite:hover {
+	color: #dc3545;
+}
+
+/*Book details*/
+
+#bookDetails {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 40px;
+}
+
+/*Book suggestions*/
+
+#bookSuggestions {
+	width: 80%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 40px;
+}
+
+/*1000px breakpoint*/
+
+@media only screen and (max-width: 1000px) {
+	#bookContentInfo {
+		width: 75%;
+	}
+
+	#bookContentCart {
+		width: 100%;
+		margin-top: 50px;
+	}
+
+	#bookContentCartBox {
+		padding: 10px;
+	}
+}
+
+/*750px breakpoint*/
+
+@media only screen and (max-width: 750px) {
+	#bookContent {
+		margin-top: 20px;
+	}
+
+	#bookContentImage {
+		width: 20%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+
+	#bookContentInfo {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

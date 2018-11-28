@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <form #bookForm="ngForm" (ngSubmit)="addBook(bookForm)">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="bookService.selectedBook._id">
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="title" #name="ngModel" [(ngModel)]="bookService.selectedBook.title" placeholder="Enter the title">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="description" #surname="ngModel" [(ngModel)]="bookService.selectedBook.description" placeholder="Enter the description">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="email" name="genre" #email="ngModel" [(ngModel)]="bookService.selectedBook.genre" placeholder="Enter the genre">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="year" #username="ngModel" [(ngModel)]="bookService.selectedBook.year" placeholder="Enter the year">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="author" #status="ngModel" [(ngModel)]="bookService.selectedBook.author" placeholder="Author">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="pages" #password="ngModel" [(ngModel)]="bookService.selectedBook.pages" placeholder="Enter the pages">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="editorial" #image="ngModel" [(ngModel)]="bookService.selectedBook.editorial" placeholder="Enter the editorial">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="total" #role="ngModel" [(ngModel)]="bookService.selectedBook.total" placeholder="Enter the total">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="onloan" #status="ngModel" [(ngModel)]="bookService.selectedBook.onloan" placeholder="Onloan">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="inhouse" #status="ngModel" [(ngModel)]="bookService.selectedBook.inhouse" placeholder="Inhouse">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="image" #status="ngModel" [(ngModel)]="bookService.selectedBook.image" placeholder="Image">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="type" #status="ngModel" [(ngModel)]="bookService.selectedBook.type" placeholder="Type">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="file" #status="ngModel" [(ngModel)]="bookService.selectedBook.file" placeholder="File">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="status" #status="ngModel" [(ngModel)]="bookService.selectedBook.status" placeholder="Status">
+                  </div>
+                  <div class="card-action">
+                    <div class="input-field col s12">
+                      <button class="btn #66bb6a green lighten-1">Save</button>
+                      <button class="btn right #00e5ff cyan accent-3" (click)="resetForm(bookForm)">Clean</button>
+                    </div>
+
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table class="striped centered">
+          <thead  class="responsive-table">
+            <tr >
+                <th>Title</th>
+                <th>Description</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th>Pages</th>
+                <th>Editorial</th>
+                <th>Total</th>
+                <th>OnLoan</th>
+                <th>InHouse</th>
+                <th>Image</th>
+                <th>Type</th>
+                <th>File</th>
+                <th>Status</th>
+                <th>Operators</th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let book of bookService.books" >
+              <td>{{ book.title }}</td>
+              <td>{{ book.description }}</td>
+              <td>{{ book.genre }}</td>
+              <td>{{ book.year }}</td>
+              <!-- <td>{{ book.password }}</td> -->
+              <td>{{ book.pages }}</td>
+              <td>{{ book.editorial }}</td>
+              <td>{{ book.total }}</td>
+              <td>{{ book.onloan }}</td>
+              <td>{{ book.inhouse }}</td>
+              <td>{{ book.image }}</td>
+              <td>{{ book.type }}</td>
+              <td>{{ book.file }}</td>
+              <td>{{ book.status }}</td>
+              <td>
+                <a (click)="editBook(book)">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a (click)="deleteBook(book._id)">
+                    <i class="material-icons">delete</i>
+                  </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

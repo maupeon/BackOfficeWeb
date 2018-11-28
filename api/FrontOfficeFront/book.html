@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Book Rental</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/bookStyle.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<a id="logoBig" class="logo" href="">
+			<img src="img/logo.png" alt="">
+		</a>
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group" id="searchInputBox">
+		    	<input type="text" class="form-control" placeholder="eg. Catcher in the Rye" id="searchInput">
+		  	</div>
+		  	<button type="submit" class="btn btn-default" id="searchBtn">Search</button>
+		</form>
+		<div id="userNavigation">
+			<a id="account" class="userNavigationButton" href="">
+				<i class="far fa-user-circle"></i>
+				<div>Tu cuenta</div>
+			</a>
+			<a id="favourites" class="userNavigationButton" href="">
+				<i class="far fa-heart"></i>
+				<div>Favoritos</div>
+			</a>
+			<a id="cart" class="userNavigationButton" href="">
+				<i class="fas fa-book-reader"></i>
+				<div>Tus libros</div>
+			</a>
+		</div>
+		<div id="userNavigationMobile">
+			<button class="dropbtn btn btn-light" onclick="toggleDropdown()">Menu&nbsp<i class="fa fa-caret-down dropglyph"></i></button>
+			<div id="userNavigationMobileDropDownMenu" class="userNavigationMobileDropDownMenu">
+				<a href="">Tu cuenta</a>
+				<a href="">Favoritos</a>
+				<a href="">Tus libros</a>
+				<a href="" class="buscar">Buscar</a>
+			</div>
+		</div>
+	</nav>
+	
+	<div id="bookContent">
+		<div id="bookContentImage">
+			<img src="img/bookCover.jpg" alt=":(">
+		</div>
+		<div id="bookContentInfo">
+			<div id="bookContentInfoTitle">The Curious Incident of the Dog in the Night-Time</div>
+			<div id="bookContentInfoAuthor">by Mark Haddon</div>
+			<div id="bookContentInfoSummary">
+				A bestselling modern classic—both poignant and funny—about a boy with autism who sets out to solve the murder of a neighbor's dog and discovers unexpected truths about himself and the world.
+				<br>
+				Nominated as one of America’s best-loved novels by PBS’s The Great American Read
+				<br>
+				Christopher John Francis Boone knows all the countries of the world and their capitals and every prime number up to 7,057. He relates well to animals but has no understanding of human emotions. He cannot stand to be touched. And he detests the color yellow.
+				<br>
+				This improbable story of Christopher's quest to investigate the suspicious death of a neighborhood dog makes for one of the most captivating, unusual, and widely heralded novels in recent years.
+			</div>
+		</div>
+		<div id="bookContentCart">
+			<div id="bookContentCartBox">
+				<button type="button" class="btn btn-success"><i class="far fa-bookmark glyph"></i></i>Alquilar</button>
+				<button type="button" class="btn btn-danger"><i class="far fa-heart glyph"></i>Me gustó</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="bookDetails">
+		<div class="title">Detalles del libro</div>
+		<table class="table table-hover">
+			<tbody>
+				<tr>
+					<td><b>Formato</b></td>
+					<td>Paperback, 226 páginas</td>
+					<td><b>Género</b></td>
+					<td>Crimen</td>
+				</tr>
+				<tr>
+					<td><b>ISBN-13</b></td>
+					<td>978-1400032716</td>
+					<td><b>Editorial</b></td>
+					<td>Vintage Contemporaries</td>
+				</tr>
+				<tr>
+					<td><b>ISBN-10</b></td>
+					<td>9781400032716</td>
+					<td><b>Idioma</b></td>
+					<td>Inglés</td>
+				</tr>
+				<tr>
+					<td><b>Edición</b></td>
+					<td>1a edición</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="bookSuggestions">
+		<div class="title">Nuestras sugerencias</div>
+	</div>
+
+	<footer>
+		EzBAC© 2018
+	</footer>
+</body>
+<script src="js/script.js"></script>
+</html>

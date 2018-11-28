@@ -1,0 +1,38 @@
+<div class = "container">
+    <div class="card">
+        <div class="card-container">
+                <div class="container mt-5">
+                        <h2 class="center">Soporte</h2>
+                        <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
+                        <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="nombre" ngModel>
+                        </div>
+                        <div class="form-group">
+                        <label>Asunto</label>
+                        <input type="text" class="form-control" name="asunto" ngModel>
+                        </div>
+                        <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" class="form-control" name="email" ngModel>
+                        </div>
+                        <div class="form-group">
+                        <label>Mensaje</label>
+                        <textarea class="form-control" cols="30" rows="6" name="mensaje" ngModel></textarea>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                       </div>
+                       <br>
+                       <hr class="linea">       
+                       <br>
+                       <div class="center">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2303.7966515107264!2d-99.25701624496897!3d19.36009867192804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d200c0fa04d82b%3A0x5e726f97d5cf3c8b!2sTecnol%C3%B3gico+de+Monterrey!5e0!3m2!1ses-419!2smx!4v1543373451627" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <br>
+          
+        </div>
+    </div>
+        
+</div>

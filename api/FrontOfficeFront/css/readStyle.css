@@ -1,0 +1,17 @@
+
+/*Book (where the pdf is displayed)*/
+
+#book .title {
+	text-align: center;
+	margin-top: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+#book iframe {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	border: 0;
+}

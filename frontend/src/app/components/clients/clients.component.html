@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <form #clientForm="ngForm" (ngSubmit)="addClient(clientForm)">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="clientService.selectedClient._id">
+              <div class="row">
+                  <div class="input-field col s12">
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="clientService.selectedClient.name" placeholder="Enter your name">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="surname" #surname="ngModel" [(ngModel)]="clientService.selectedClient.surname" placeholder="Enter your surname">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="email" name="email" #email="ngModel" [(ngModel)]="clientService.selectedClient.email" placeholder="Enter your email">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="username" #username="ngModel" [(ngModel)]="clientService.selectedClient.username" placeholder="Enter your username">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="password" #password="ngModel" [(ngModel)]="clientService.selectedClient.password" placeholder="Enter your password">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="image" #image="ngModel" [(ngModel)]="clientService.selectedClient.image" placeholder="Enter your image">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="role" #role="ngModel" [(ngModel)]="clientService.selectedClient.role" placeholder="Enter your role">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="status" #status="ngModel" [(ngModel)]="clientService.selectedClient.status" placeholder="Enter your status">
+                  </div>
+  
+                  <div class="card-action">
+                    <div class="input-field col s12">
+                      <button class="btn #66bb6a green lighten-1">Save</button>
+                      <button class="btn right #00e5ff cyan accent-3" (click)="resetForm(clientForm)">Clean</button>
+                    </div>
+  
+                  </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table class="striped centered">
+          <thead  class="responsive-table">
+            <tr >
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Image</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Operators</th>
+            </tr>
+           
+          </thead>
+          <tbody>
+            <tr *ngFor="let client of clientService.clients" >
+              <td>{{ client.name }}</td>
+              <td>{{ client.surname }}</td>
+              <td>{{ client.email }}</td>
+              <td>{{ client.username }}</td>
+              <!-- <td>{{ client.password }}</td> -->
+              <td>{{ client.image }}</td>
+              <td>{{ client.role }}</td>
+              <td>{{ client.status }}</td>
+              <td>{{ client.balance }}</td>
+              <td>
+                <a (click)="editClient(client)">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a (click)="deleteClient(client._id)">
+                    <i class="material-icons">delete</i>
+                  </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
